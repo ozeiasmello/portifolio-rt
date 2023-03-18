@@ -1,13 +1,12 @@
-import React from 'react'
 import { P } from './styles'
 
-type Props = {
-  children: React.ReactNode
-  className?: string
+export type Props = {
+  children: string
+  tipo?: 'principal' | 'secundario'
 }
 
-const Paragrafo = ({ children, className }: Props) => {
-  return <p className={className}>{children}</p>
-}
+const Paragrafo = ({ children, tipo = 'principal' }: Props) => (
+  <P tipo={tipo}>{children}</P>
+)
 
 export default Paragrafo
